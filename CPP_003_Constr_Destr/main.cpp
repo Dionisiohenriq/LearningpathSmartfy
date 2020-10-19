@@ -1,30 +1,23 @@
-#include "ConstrDestr.h"
+#include "Aluno.h"
 #include<iostream>
 
 using namespace std;
-
+using namespace cpp_003;
 
 int main()
 {
 	
-	ConstrDestr constr1;
-	ConstrDestr constr2;
-	string frase1;
-	string frase2;
+	cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
+	cout << "||||||||||||||||||||||| EXEMPLO CONSTRUTOR E DESTRUTOR |||||||||||||||||||||||" << endl;
+	cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 
-	cout << "Insira uma frase" << endl;
-	cin >> frase1;
-	
-	cout << "Insira uma segunda frase" << endl;
-	cin >> frase2;
+	Aluno aluno1; //Construtor padrao nao define nome e etc...
+	Aluno aluno2("Henrique","Dionisio"); //Construtor Ja defini as variaveis MAIS IMPORTANTES
+	aluno1.setNome("Eliel");
+	aluno1.setSobrenome("Silva");
+	cout << "ALUNO 1 - " << aluno1.getNome() << endl;
+	cout << "ALUNO 2 - " << aluno2.getSobrenome() << endl;
+	cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 
-	constr1.setConstr(frase1);
-	constr2.setDestr(frase2);
-	
-	cout << "A primeira frase foi: " << constr1.getConstr() << endl;
-
-	cout << "A segunda frase foi: " << constr2.getDestr() << endl;
-
-	
 
 }
