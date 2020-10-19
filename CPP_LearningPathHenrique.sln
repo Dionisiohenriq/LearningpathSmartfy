@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPP_001_Classes", "CPP_Lear
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPP_002_Ponteiros", "CPP_002_Ponteiros\CPP_002_Ponteiros.vcxproj", "{84CB3692-C7E8-459D-B75B-B424FD8B0616}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPP_003_Constr_Destr", "CPP_003_Constr_Destr\CPP_003_Constr_Destr.vcxproj", "{AF0B829D-241D-48C7-B97D-D77C965E0309}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{84CB3692-C7E8-459D-B75B-B424FD8B0616}.Release|x64.Build.0 = Release|x64
 		{84CB3692-C7E8-459D-B75B-B424FD8B0616}.Release|x86.ActiveCfg = Release|Win32
 		{84CB3692-C7E8-459D-B75B-B424FD8B0616}.Release|x86.Build.0 = Release|Win32
+		{AF0B829D-241D-48C7-B97D-D77C965E0309}.Debug|x64.ActiveCfg = Debug|x64
+		{AF0B829D-241D-48C7-B97D-D77C965E0309}.Debug|x64.Build.0 = Debug|x64
+		{AF0B829D-241D-48C7-B97D-D77C965E0309}.Debug|x86.ActiveCfg = Debug|Win32
+		{AF0B829D-241D-48C7-B97D-D77C965E0309}.Debug|x86.Build.0 = Debug|Win32
+		{AF0B829D-241D-48C7-B97D-D77C965E0309}.Release|x64.ActiveCfg = Release|x64
+		{AF0B829D-241D-48C7-B97D-D77C965E0309}.Release|x64.Build.0 = Release|x64
+		{AF0B829D-241D-48C7-B97D-D77C965E0309}.Release|x86.ActiveCfg = Release|Win32
+		{AF0B829D-241D-48C7-B97D-D77C965E0309}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
