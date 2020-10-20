@@ -9,7 +9,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPP_002_Ponteiros", "CPP_00
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPP_003_Constr_Destr", "CPP_003_Constr_Destr\CPP_003_Constr_Destr.vcxproj", "{AF0B829D-241D-48C7-B97D-D77C965E0309}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Exemplo_Herança", "Exemplo_Herança\Exemplo_Herança.vcxproj", "{BBD2F87B-2203-42B6-963A-1FF0C057EA6B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPP_004_Heranca", "Exemplo_Herança\Exemplo_Herança.vcxproj", "{BBD2F87B-2203-42B6-963A-1FF0C057EA6B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPP_005_THIS", "CPP_005_THIS\CPP_005_THIS.vcxproj", "{BAE25B1B-309B-4BD1-8FB1-F72B76FDA45C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,14 @@ Global
 		{BBD2F87B-2203-42B6-963A-1FF0C057EA6B}.Release|x64.Build.0 = Release|x64
 		{BBD2F87B-2203-42B6-963A-1FF0C057EA6B}.Release|x86.ActiveCfg = Release|Win32
 		{BBD2F87B-2203-42B6-963A-1FF0C057EA6B}.Release|x86.Build.0 = Release|Win32
+		{BAE25B1B-309B-4BD1-8FB1-F72B76FDA45C}.Debug|x64.ActiveCfg = Debug|x64
+		{BAE25B1B-309B-4BD1-8FB1-F72B76FDA45C}.Debug|x64.Build.0 = Debug|x64
+		{BAE25B1B-309B-4BD1-8FB1-F72B76FDA45C}.Debug|x86.ActiveCfg = Debug|Win32
+		{BAE25B1B-309B-4BD1-8FB1-F72B76FDA45C}.Debug|x86.Build.0 = Debug|Win32
+		{BAE25B1B-309B-4BD1-8FB1-F72B76FDA45C}.Release|x64.ActiveCfg = Release|x64
+		{BAE25B1B-309B-4BD1-8FB1-F72B76FDA45C}.Release|x64.Build.0 = Release|x64
+		{BAE25B1B-309B-4BD1-8FB1-F72B76FDA45C}.Release|x86.ActiveCfg = Release|Win32
+		{BAE25B1B-309B-4BD1-8FB1-F72B76FDA45C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
