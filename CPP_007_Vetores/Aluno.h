@@ -18,5 +18,7 @@ class Aluno
 		string getSobreNome() { return SobreNome; }
 		void setNotas(int notas);
 		void getNotas();
+		int getNota(int posicao);
+		int getMaiorNota();
 };
 

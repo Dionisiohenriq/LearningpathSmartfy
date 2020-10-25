@@ -29,5 +29,17 @@ int main()
 		i++;
 	}
 	aluno1.getNotas();
+	
+	int posicao = 0;
+	
+
+	while (posicao != -1)
+	{
+		cout << "insira a posicao da nota a ser recuperada ou -1 para sair" << endl;
+		cin >> posicao;
+		cout << "Nota = " << aluno1.getNota(posicao) << " Na posição = " << posicao << endl;
+	}
+
+	cout << aluno1.getMaiorNota() << endl;
 }
 	

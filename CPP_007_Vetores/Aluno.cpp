@@ -8,8 +8,29 @@ void Aluno::setNotas(int notas)
 
 void Aluno::getNotas()
 {
-	for (int i = 0; i < size(Notas); i++)
+	int j = 1;
+	for (auto i = Notas.begin(); i != Notas.end(); ++i)
 	{
-		cout << "Nota " << (i + 1) << " do aluno " << getNome() << " " << getSobreNome() << " = "<< Notas[i] << endl;
+		
+		cout << "Nota " << j << " do aluno " << getNome() << " " << getSobreNome() << " = "<< *i << endl;
+		j++;
 	}
+}
+
+int Aluno::getNota(int posicao)
+{
+	return Notas.at(posicao);
+}
+
+int Aluno::getMaiorNota()
+{
+	int maiorNota = 0;
+	for (auto i = Notas.begin(); i != Notas.end(); i++) 
+	{
+		if (*i > maiorNota)
+		{
+			maiorNota = *i;
+		}
+	}
+	return maiorNota;
 }
