@@ -31,15 +31,37 @@ int main()
 	aluno1.getNotas();
 	
 	int posicao = 0;
-	
 
 	while (posicao != -1)
 	{
+		
 		cout << "insira a posicao da nota a ser recuperada ou -1 para sair" << endl;
 		cin >> posicao;
-		cout << "Nota = " << aluno1.getNota(posicao) << " Na posição = " << posicao << endl;
+
+		if (posicao != -1)
+		{
+			aluno1.getNota(posicao);
+		}
+		else
+		{
+			break;
+		}
+		
 	}
 
-	cout << aluno1.getMaiorNota() << endl;
+	cout << "A maior nota foi = " << aluno1.getMaiorNota() << endl;
+	cout << "A media é = " << aluno1.getMediaNotas() << endl;
+
+	posicao = 0;
+	cout << "Insira a posição que deseja remover a nota: " << endl;
+	cin >> posicao;
+
+	cout << "Removendo nota" << endl;
+	aluno1.removeNota(posicao);
+	cout << "Nota removida" << endl;
+
+	aluno1.getNotas();
+
+	system("pause");
 }
 	
