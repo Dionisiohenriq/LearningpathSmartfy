@@ -18,12 +18,16 @@ namespace CSharp_002_MailDelivery
             emailModel.MailTo = "eliel.eas@gmail.com";
             emailModel.Subject = "Teste123";
             emailModel.Message = "Corpo do Texto";
+            
+            List<string> emailsCcList = new List<string>();
+            emailsCcList.Add("fehbritooficial@gmail.com");
+            emailsCcList.Add("henriquedionisio.dionisioferre@gmail.com");
 
 
             //Serviços ou Interface são classes e objetos que FAZEM ALGUMA COISA
             IEmailService emailService = new EmailService();
             
-            if(emailService.SendEmail(emailModel))
+            if(emailService.SendEmails(emailModel, emailsCcList))
             {
                 Console.WriteLine("Emails enviados com sucesso!");
             }

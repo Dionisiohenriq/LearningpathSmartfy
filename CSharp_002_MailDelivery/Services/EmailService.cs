@@ -1,9 +1,8 @@
 ﻿using CSharp_002_MailDelivery.Entities;
-using System;
-using System.Collections.Generic;
 using System.Net;
 using System.Net.Mail;
-using System.Text;
+using CSharp_002_MailDelivery.Extensions;
+using System.Collections.Generic;
 
 namespace CSharp_002_MailDelivery
 {
@@ -27,14 +26,7 @@ namespace CSharp_002_MailDelivery
         public bool SendEmail(EmailEntity emailContent)
         {
 
-            //MAILJET
-            var Msg = new MailMessage();
-            Msg.Body = emailContent.Message;
-            Msg.From = new MailAddress("testlearningpath@protonmail.com");
-            Msg.Subject = emailContent.Subject;
-            List<string> p = new List<string>();
-
-            Msg.To.Add(emailContent.MailTo);
+            MailMessage Msg = emailContent.ToMailMessage();
 
             var Client = new SmtpClient();
             Client.Credentials =
@@ -48,6 +40,18 @@ namespace CSharp_002_MailDelivery
             return true;
         }
 
+        public bool SendEmails(EmailEntity emailContent, List<string> emailsList)
+        {
+            MailMessage Msg = emailContent.ToMailsMessage(emailsList);//ESTUDAR ESSA LINHA PRA SEMPRE
 
+            var Client = new SmtpClient();
+            Client.Credentials = new NetworkCredential("d0c7be603fe161b5bd7f2b54189c794f", "11cf1e2c49789fc302253313bcf716c4");
+            Client.Port = 587;
+            Client.Host = "in-v3.mailjet.com";
+            Client.EnableSsl = true;
+            Client.Send(Msg);
+
+            return true;
+        }
     }
 }
