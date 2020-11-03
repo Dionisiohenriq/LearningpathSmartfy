@@ -13,12 +13,17 @@ namespace CSharp_002_MailDelivery
         static void Main(string [] args) 
         {
 
-            EmailContent emailContent = new EmailContent();
-            //Fill emailContent
+            //Entidade são classes e objetos que SÃO ALGUMA COISA
+            EmailEntity emailModel = new EmailEntity();
+            emailModel.MailTo = "eliel.eas@gmail.com";
+            emailModel.Subject = "Teste123";
+            emailModel.Message = "Corpo do Texto";
 
+
+            //Serviços ou Interface são classes e objetos que FAZEM ALGUMA COISA
             IEmailService emailService = new EmailService();
             
-            if(emailService.SendEmail(emailContent))
+            if(emailService.SendEmail(emailModel))
             {
                 Console.WriteLine("Emails enviados com sucesso!");
             }

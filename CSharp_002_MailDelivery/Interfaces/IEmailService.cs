@@ -4,6 +4,6 @@ namespace CSharp_002_MailDelivery
 {
     interface IEmailService
     {
-        bool SendEmail(EmailContent emailContent);
+        bool SendEmail(EmailEntity emailContent);
     }
 }
