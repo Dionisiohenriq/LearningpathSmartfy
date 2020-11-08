@@ -27,11 +27,11 @@ namespace CSharp_007_NotasAlunos
             #region DAO
             var dao = new NotaAlunoDAO();
 
-            for (int i = 0;i < 400; ++i)
-                dao.Insert(notaAluno);
+            //for (int i = 0;i < 400; ++i)
+            //    dao.Insert(notaAluno);
 
-            
-
+            notaAluno.Id = 1;
+            dao.Delete(notaAluno);
 
 
             notaAluno.Nome = "Steve Jobs";
