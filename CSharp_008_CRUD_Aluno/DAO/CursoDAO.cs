@@ -12,20 +12,20 @@ namespace CSharp_008_CRUD_Aluno.DAO
       
         public void Insert(Curso entity)
         {
-            var connString = "Server=localhost;Database=csharp_003;Uid=root;Pwd=";
+            var connString = "Server=localhost;Database=crudaluno;Uid=root;Pwd=";
             var connection = new MySqlConnection(connString);
             var command = connection.CreateCommand();
 
             try
             {
                 connection.Open();
-                command.CommandText = "INSERT INTO notaaluno (Nome, Nota1, Nota2, Nota3, Nota4, Media)" +
+                command.CommandText = "INSERT INTO curso (Nome, Sala, QtdAlunos, Periodo)" +
                                        "VALUES (?nome, ?sala, ?qtdAlunos, ?periodo)";
 
                 command.Parameters.Add("?nome", MySqlDbType.VarChar).Value = entity.Nome;
-                command.Parameters.Add("?sala", MySqlDbType.Int32).Value = entity.Sala;
-                command.Parameters.Add("?qtdAlunos", MySqlDbType.Int32).Value = entity.QtdAlunos;
-                command.Parameters.Add("?periodo", MySqlDbType.VarChar).Value = entity.Periodo;
+                command.Parameters.Add("?sala", MySqlDbType.Double).Value = entity.Sala;
+                command.Parameters.Add("?qtdAlunos", MySqlDbType.Double).Value = entity.QtdAlunos;
+                command.Parameters.Add("?periodo", MySqlDbType.Double).Value = entity.Periodo;
                 //command.Parameters.Add("?idAluno", MySqlDbType.Int32).Value = entity.Id;
 
 
@@ -48,7 +48,7 @@ namespace CSharp_008_CRUD_Aluno.DAO
             try
             {
                 connection.Open();
-                command.CommandText = "INSERT INTO notaaluno (Nome, Nota1, Nota2, Nota3, Nota4, Media)" +
+                command.CommandText = "INSERT INTO notaaluno (Nome, Sala, QtdAlunos, Periodo)" +
                                         "VALUES (?nome, ?sala, ?qtdAlunos, ?periodo)";
 
                 command.Parameters.Add("?nome", MySqlDbType.VarChar).Value = entity.Nome;

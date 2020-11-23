@@ -13,15 +13,16 @@ namespace CSharp_007_NotasAlunos
 
             #region ENTITY
             var notaAluno = new NotaAluno();
-
+            var notaAlunoDao = new NotaAlunoDAO();
             
             //FILL OBJECT
-            notaAluno.Nome = "John Doeeeeeeeeejjjjjjjjjeeeeee";
-            notaAluno.Nota1 = 1;
-            notaAluno.Nota2 = 2;
-            notaAluno.Nota3 = 3;
-            notaAluno.Nota4 = 4;
-            notaAluno.Media = 5;
+            notaAluno.Nome = "Henrique Dionisio";
+            notaAluno.Nota1 = 10;
+            notaAluno.Nota2 = 8;
+            notaAluno.Nota3 = 4;
+            notaAluno.Nota4 = 5;
+            notaAluno.Media = (notaAluno.Nota1 + notaAluno.Nota2 + notaAluno.Nota3 + notaAluno.Nota4) / 4;
+            notaAlunoDao.Insert(notaAluno);
             #endregion //ENTITY
 
             #region DAO
@@ -31,11 +32,12 @@ namespace CSharp_007_NotasAlunos
             //    dao.Insert(notaAluno);
 
             notaAluno.Id = 1;
-            dao.Delete(notaAluno);
+            //dao.Delete(notaAluno);
+            dao.Select(notaAluno);
 
 
-            notaAluno.Nome = "Steve Jobs";
-            dao.Update(notaAluno);
+            //notaAluno.Nome = "Steve Jobs";
+            //dao.Update(notaAluno);
             #endregion //DAO
 
         }

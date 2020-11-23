@@ -100,7 +100,7 @@ namespace CSharp_007_NotasAlunos.DAO
                 return false;
             }
         }
-        public void Select(string queryFilter = "", NotaAluno entity)
+        public void Select(NotaAluno entity)
         {
 
             var connString = "Server=localhost;Database=csharp_003;Uid=root;Pwd=";
@@ -131,7 +131,7 @@ namespace CSharp_007_NotasAlunos.DAO
             catch (Exception exception)
             {
                 string x = exception.InnerException.ToString();
-                return false;
+                
             }
         }
 
